@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "PT Mono";
+  src: url("../fonts/pt-mono-regular.eot");
+  src: url("../fonts/pt-mono-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/pt-mono-regular.woff2") format("woff2"),
+    url("../fonts/pt-mono-regular.woff") format("woff"),
+    url("../fonts/pt-mono-regular.ttf") format("truetype"),
+    url("../fonts/pt-mono-regular.svg#PTMono-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/roboto-condensed-bold.eot");
+  src: url("../fonts/roboto-condensed-bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/roboto-condensed-bold.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-bold.woff") format("woff"),
+    url("../fonts/roboto-condensed-bold.ttf") format("truetype"),
+    url("../fonts/roboto-condensed-bold.svg#RobotoCondensed-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/roboto-condensed-regular.eot");
+  src: url("../fonts/roboto-condensed-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/roboto-condensed-regular.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-regular.woff") format("woff"),
+    url("../fonts/roboto-condensed-regular.ttf") format("truetype"),
+    url("../fonts/roboto-condensed-regular.svg#RobotoCondensed-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

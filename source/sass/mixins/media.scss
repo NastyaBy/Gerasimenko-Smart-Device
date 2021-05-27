@@ -1,0 +1,26 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin retina-size {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}

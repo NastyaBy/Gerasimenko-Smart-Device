@@ -1,0 +1,21 @@
+@import "../variables.scss";
+@import "../mixins/media";
+
+.button {
+  margin: 0;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $basic-white;
+  background: $accent-color;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  border: 1px solid $basic-white ;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
