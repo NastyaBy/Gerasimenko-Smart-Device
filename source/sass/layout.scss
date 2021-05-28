@@ -8,9 +8,10 @@
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  font-family: "PT Mono", "Roboto Condensed", "Arial", sans-serif;
+  font-family: $general-font;
   font-size: 16px;
   line-height: 22px;
+  background: $principal-background-color;
 }
 
 .layout__header {
@@ -18,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 1425px;
+  max-width: 1435px;
   width: 100%;
 }
 
@@ -27,7 +28,8 @@
 }
 
 .layout__footer {
-  padding: 30px 0 0;
+  margin: 0 auto;
+  padding:0;
 }
 
 .visually-hidden:not(:focus):not(:active) {
