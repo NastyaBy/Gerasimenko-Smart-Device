@@ -37,6 +37,16 @@
     text-decoration: none;
     color: $basic-white;
 
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:focus {
+      outline: 2px solid;
+      opacity: 1;
+      color: $accent-color;
+    }
+
     @include media-tablet {
       margin: 7px 22px 0 10px;
       font-size: 0;

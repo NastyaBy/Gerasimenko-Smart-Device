@@ -18,4 +18,15 @@
   border: 1px solid $basic-white ;
   border-radius: 5px;
   box-sizing: border-box;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:focus {
+    outline: 2px solid;
+    opacity: 1;
+    color: $accent-color;
+    border-radius: 5px;
+  }
 }
