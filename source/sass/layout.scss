@@ -18,9 +18,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  max-width: 1435px;
+  max-width: 1465px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .layout__main {
@@ -28,8 +28,9 @@
 }
 
 .layout__footer {
+  max-width: 1465px;
+  width: 100%;
   margin: 0 auto;
-  padding:0;
 }
 
 .visually-hidden:not(:focus):not(:active) {
