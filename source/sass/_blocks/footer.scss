@@ -102,8 +102,15 @@
 
 .footer-nav__menu {
   display: grid;
-  column-gap: 70px;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
   align-content: start;
+
+  @include media-tablet {
+    grid-auto-flow: row;
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
 
   a {
     color: $footer-text-color;
