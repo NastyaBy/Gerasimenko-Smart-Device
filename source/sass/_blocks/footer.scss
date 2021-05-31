@@ -25,17 +25,18 @@
   align-content: start;
 
   @include media-tablet {
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: -38px;
-    border-top: 1px solid $footer-info-border-color;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: -38px;
+      border-top: 1px solid $footer-info-border-color;
 
-    @include media-mobile {
-      margin-top: 0;
-    }}
+      @include media-mobile {
+        margin-top: 0;
+      }
+    }
   }
 
 
@@ -65,10 +66,10 @@
         & + .footer-nav__menu {
           max-height: 500px;
           padding: 14px 20px 4px 0;
-          }
         }
       }
     }
+  }
 
   &--social {
     display: grid;
@@ -260,10 +261,10 @@
     @include media-tablet {
       margin-top: -22px;
     }
+
     @include media-mobile {
       margin-top: -28px;
     }
-
   }
 
   @include media-tablet {
