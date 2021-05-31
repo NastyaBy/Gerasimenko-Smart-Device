@@ -15,6 +15,7 @@
 }
 
 .layout__header {
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +26,7 @@
 
 .layout__main {
   flex-grow: 1;
+  margin-top: -120px;
 }
 
 .layout__footer {

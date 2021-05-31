@@ -1,0 +1,89 @@
+@import "../variables.scss";
+@import "../mixins/media";
+
+.intro {
+  position: relative;
+  background: $intro-background-color url("../../img/background-intro.png") 50% 50% no-repeat;
+
+  picture {
+    position: absolute;
+    top: calc(50% - 182px);
+    left: calc(50% + 82px);
+    z-index: 5;
+
+    &::before {
+     position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 640px;
+      height: 640px;
+      margin: -62px 0 0 -1px;
+      background: url("data:image/svg+xml,%3Csvg width='611' height='487' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.2' d='M605.842 5.584l-274.675 475.75L56.492 5.584h549.35z' stroke='%23fff'/%3E%3Cpath opacity='.2' d='M326.148 203.75L165.5 482 4.852 203.75h321.296z' stroke='%23fff'/%3E%3Ccircle cx='56' cy='5' r='5' fill='%23fff'/%3E%3Ccircle cx='5' cy='204' r='5' fill='%23fff'/%3E%3Ccircle cx='166' cy='482' r='5' fill='%23fff'/%3E%3Ccircle cx='331' cy='481' r='5' fill='%23fff'/%3E%3Ccircle cx='606' cy='5' r='5' fill='%23fff'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    }
+  }
+}
+
+.intro__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1465px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 249px 0 274px;
+  color: $basic-white;
+
+
+  h1 {
+    margin-bottom: 5px;
+    padding-left: 26px;
+    font-family: $accent-font;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: relative;
+    max-width: 620px;
+    width: 100%;
+    margin: 22px 0 45px 124px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -95px;
+      top: 17px;
+      width: 66px;
+      border-top: 2px solid $basic-white;
+    }
+  }
+
+  button {
+    max-width: 408px;
+    margin-left: 123px;
+  }
+
+  a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 129px -10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+  }
+
+}

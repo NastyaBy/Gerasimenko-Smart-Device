@@ -3,10 +3,11 @@
 
 .button {
   margin: 0;
-  padding: 12px;
+  padding: 17px;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   color: $basic-white;
   background: $accent-color;
   text-align: center;
@@ -15,18 +16,20 @@
   outline: none;
   cursor: pointer;
   font-family: $accent-font;
-  border: 1px solid $basic-white;
+  border: 1px solid $accent-color   ;
   border-radius: 5px;
   box-sizing: border-box;
 
   &:hover {
     color: $accent-color;
+    background-color: $basic-white;
+    border: 1px solid $accent-color;
   }
 
   &:focus {
-    outline: 2px solid;
     opacity: 1;
     color: $accent-color;
+    background-color: $basic-white;
     border-radius: 5px;
   }
 }

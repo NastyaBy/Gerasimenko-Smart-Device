@@ -3,7 +3,7 @@
 
 .header-logo {
   margin-right: auto;
-  padding: 34px 14px 34px 24px;
+  padding: 33px 14px 34px 29px;
   font-size: 0;
   line-height: 0;
 
@@ -32,6 +32,11 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 24px;
+
+  @include media-tablet {
+    margin-right: 0;
+  }
+
 
   a {
     margin: 0 50px 0 40px;
@@ -79,8 +84,21 @@
 
   button {
     width: 180px;
+    padding: 12px;
+    letter-spacing: 0;
     background: none;
-    border-color: $basic-white;
+    border: 1px solid $basic-white;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:focus {
+      outline: 2px solid;
+      opacity: 1;
+      color: $accent-color;
+      border-radius: 5px;
+    }
 
     @include media-tablet {
       display: none;

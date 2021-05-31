@@ -39,24 +39,45 @@
 
 </header>
 
-<main class="layout__main" style="display: none">
+<main class="layout__main">
   <section class="intro">
-    <h1>Печатные платы</h1>
+    <picture>
+      <!-- 1х: 294px; 2x: 588px -->
+      <source type="image/webp" media="(max-width: 767px)" srcset="./img/printed-boards-mobile@1x.webp 1x, ./img/printed-boards-mobile@2x.webp 2x">
+      <!-- 1х: 260px; 2x: 520px -->
+      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/printed-boards-tablet@1x.webp 1x, ./img/printed-boards-tablet@2x.webp 2x">
+      <!-- 1х: 705px; 2x: 1410px -->
+      <source type="image/webp" media="(min-width: 1024px)" srcset="./img/printed-boards-desktop@1x.webp 1x, ./img/printed-boards-desktop@2x.webp 2x">
+      <!-- 1х: 294px; 2x: 588px -->
+      <source media="(max-width: 767px)" srcset="./img/printed-boards-mobile@1x.png 1x, ./img/printed-boards-mobile@2x.png 2x">
+      <!-- 1х: 260px; 2x: 520px -->
+      <source media="(max-width: 1023px)" srcset="./img/printed-boards-tablet@1x.png 1x, ./img/printed-boards-tablet@2x.png 2x">
+      <!-- 1х: 705px; 2x: 1410px -->
+      <source media="(min-width: 1024px)" srcset="./img/printed-boards-desktop@1x.png 1x, ./img/printed-boards-desktop@2x.png 2x">
+      <!-- 1х: 705px; 2x: 1410px -->
+      <img src="img/printed-boards-desktop@1x.png" srcset="./img/printed-boards-desktop@2x.png 2x" width="705" height="515" alt="Печатные платы">
+    </picture>
+    <div class="intro__inner">
+      <h1>Печатные платы</h1>
+      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button class="button">Получить бесплатную консультацию</button>
+      <a>Скролл вниз</a>
+    </div>
   </section>
 
-  <section class="property">
+  <section class="property" style="display: none;">
     <h2>Преймущества</h2>
   </section>
 
-  <section class="about-company">
+  <section class="about-company" style="display: none;">
     <h2>О компании</h2>
   </section>
 
-  <section class="goods-services">
+  <section class="goods-services" style="display: none;">
     <h2>Товары и услуги</h2>
   </section>
 
-  <section class="feedback">
+  <section class="feedback" style="display: none;">
     <h2>Форма обратной связи</h2>
   </section>
 
@@ -94,7 +115,7 @@
     </div>
 
     <div class="footer-nav__item footer-nav__item--sections">
-      <h3 class="active">Разделы сайта</h3>
+      <h3>Разделы сайта</h3>
       <div class="footer-nav__menu">
         <a href="#" aria-label="О компании">О компании</a>
         <a href="#" aria-label="Продукты">Продукты</a>
@@ -155,6 +176,6 @@
   </symbol>
 </svg>
 
-<script src="./js/accordion.js"></script>
+<!--<script src="./js/accordion.js"></script>-->
 </body>
 </html>

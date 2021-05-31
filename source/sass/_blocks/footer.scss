@@ -24,6 +24,27 @@
 .footer-nav__item {
   align-content: start;
 
+  @include media-tablet {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -38px;
+    border-top: 1px solid $footer-info-border-color;
+
+    @include media-mobile {
+      margin-top: 0;
+    }}
+  }
+
+
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
+
   h3 {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -38,24 +59,22 @@
 
     @include media-mobile {
       margin: 0;
-      padding: 20px;
+      padding: 30px 0 17px;
 
       &.active {
         & + .footer-nav__menu {
           max-height: 500px;
-          padding: {
-            top: 20px;
-            bottom: 20px;
+          padding: 14px 20px 4px 0;
           }
         }
       }
     }
-  }
 
   &--social {
     display: grid;
 
     svg {
+      display: block;
       color: $footer-icon-color;
 
       &:hover {
@@ -68,8 +87,8 @@
       grid-column-end: -1;
       grid-row-start: 1;
       grid-row-end: 2;
-      grid-template-columns: minmax(234px, 1fr) 1fr 1fr;
-      margin-bottom: 56px;
+      grid-template-columns: minmax(234px, 1fr) 1fr min-content;
+      margin-bottom: 63px;
       align-items: center;
 
       :last-child {
@@ -79,6 +98,8 @@
       @include media-mobile {
         grid-template-columns: 1fr;
         justify-self: center;
+        gap: 27px;
+        margin-bottom: 54px;
 
         :last-child {
           justify-self: center;
@@ -100,15 +121,6 @@
       grid-row-start: 2;
       grid-row-end: 3;
       grid-template-columns: 1fr;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-top: -38px;
-        border-top: 1px solid $footer-info-border-color;
-      }
     }
 
     @include media-mobile {
@@ -144,7 +156,7 @@
 .footer-nav__menu {
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
   column-gap: 16px;
   align-content: start;
 
@@ -157,7 +169,7 @@
   @include media-mobile {
     max-height: 0;
     margin-bottom: 10px;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     border-top: 0;
     overflow: hidden;
     transition: max-height 0.3s, padding 0.3s;
@@ -204,6 +216,10 @@
   @include media-tablet {
     margin-bottom: 0;
   }
+
+  @include media-mobile {
+    margin-left: 8px;
+  }
 }
 
 .social {
@@ -213,8 +229,8 @@
   grid-auto-flow: column;
   gap: 16px;
 
-  @include media-tablet {
-    margin-top: -10px;
+  @include media-mobile {
+    margin-top: 4px;
   }
 }
 
@@ -242,8 +258,12 @@
     border-top: 1px solid $footer-info-border-color;
 
     @include media-tablet {
-      margin-top: -23px;
+      margin-top: -22px;
     }
+    @include media-mobile {
+      margin-top: -28px;
+    }
+
   }
 
   @include media-tablet {
@@ -255,6 +275,7 @@
   @include media-mobile {
     grid-template-columns: 1fr;
     row-gap: 20px;
+    padding: 40px 0 23px;
 
     :last-child {
       justify-self: center;
