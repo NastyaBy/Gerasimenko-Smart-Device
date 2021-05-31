@@ -3,7 +3,7 @@
 
 .header-logo {
   margin-right: auto;
-  padding: 33px 14px 34px 29px;
+  padding: 33px 14px 34px 38px;
   font-size: 0;
   line-height: 0;
 
@@ -31,7 +31,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 24px;
+  margin-right: 16px;
 
   @include media-tablet {
     margin-right: 0;
