@@ -3,7 +3,8 @@
 
 .intro {
   position: relative;
-  background: $intro-background-color url("../../img/background-intro.png") 50% 50% no-repeat;
+  background: $intro-background-color url("../../img/background-intro.png") 50% 50% / cover no-repeat;
+  overflow: hidden;
 
   picture {
     position: absolute;
@@ -75,7 +76,7 @@
   color: $basic-white;
 
   @include media-tablet {
-    padding: 176px 0 274px;
+    padding: 176px 0 163px;
   }
 
   @include media-mobile {
@@ -100,7 +101,7 @@
       line-height: 70px;
     }
 
-    @include media-tablet {
+    @include media-mobile {
       max-width: 290px;
       padding-left: 14px;
       font-style: normal;
@@ -184,8 +185,10 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+  color: $basic-white;
   opacity: 0.5;
   transform: rotate(-90deg);
+  text-decoration: none;
 
   @include media-tablet {
     display: none;
