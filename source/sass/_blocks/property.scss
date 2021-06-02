@@ -8,15 +8,15 @@
   max-width: 1147px;
   width: 100%;
   margin: 0 auto;
-  padding: 112px 0;
+  padding: 112px 0 75px;
 
   @include media-tablet {
     margin: 0 25px;
-    padding-top: 54px;
+    padding: 54px 0 112px;
     width: auto;
   }
 
-  @include media-tablet {
+  @include media-mobile {
     grid-template-columns: 1fr;
     margin: 0 14px;
     padding-top: 37px;
@@ -28,7 +28,7 @@
   position: relative;
   min-height: 217px;
   padding: 40px 42px 40px 45px;
-  color: #666666;
+  color: $principal-text-color;
   border: 1px solid $property-item-border-color;
   cursor: pointer;
 

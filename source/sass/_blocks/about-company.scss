@@ -1,0 +1,64 @@
+@import "../variables.scss";
+@import "../mixins/media";
+
+.about-company {
+  max-width: 1147px;
+  width: 100%;
+  margin: 0 auto;
+  color: $principal-text-color;
+
+
+  &--year {
+    position: relative;
+    padding-left: 200px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 220px;
+      height: 317px;
+      margin-left: 71px;
+      background: url("../../img/2005.png") 50% 50% no-repeat ;
+    }
+  }
+
+  h2 {
+    margin-bottom: 21px;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  p {
+    max-width: 975px;
+    margin-bottom: 22px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.about-company__button {
+  margin-top: 20px;
+  color: $accent-color;
+  background: $basic-white;
+
+  &:hover {
+    color: $basic-white;
+    background-color: $accent-color;
+    border: 1px solid $basic-white;
+  }
+
+  &:focus {
+    opacity: 1;
+    color: $basic-white;
+    background-color: $accent-color;
+    border-radius: 5px;
+  }
+}

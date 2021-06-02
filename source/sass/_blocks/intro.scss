@@ -190,6 +190,14 @@
   transform: rotate(-90deg);
   text-decoration: none;
 
+  &:hover {
+    color: $accent-color;
+  }
+  &:focus {
+    color: $accent-color;
+    border: 2px solid  $accent-color;
+  }
+
   @include media-tablet {
     display: none;
   }
