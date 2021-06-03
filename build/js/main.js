@@ -4,15 +4,15 @@
 var footer = document.querySelector('.footer-nav');
 var actives = footer.querySelectorAll('.active');
 
-actives.forEach(function(active) {
+actives.forEach(function (active) {
   active.classList.remove('active');
 });
 
 var accordionHeading = footer.querySelectorAll('h3');
 
-accordionHeading.forEach(function(item) {
-  item.addEventListener('click', function() {
-    accordionHeading.forEach(function(element) {
+accordionHeading.forEach(function (item) {
+  item.addEventListener('click', function () {
+    accordionHeading.forEach(function (element) {
       if (element.classList.contains('active')) {
         element.classList.remove('active');
       }
@@ -24,7 +24,7 @@ accordionHeading.forEach(function(item) {
 
 // маски валидации input
 // валидации телефона
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
   function setCursorPosition(pos, elem) {
     elem.focus();
     if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
@@ -125,21 +125,21 @@ if (sendForms) {
 
 // открытие модального окна
 
-const modalTriggers = document.querySelectorAll('.js-modalOpen');
-const bodyBlackout = document.querySelector('.js-modalBlackout');
-const modalCloseBtn = document.querySelector('.js-modalCloseBtn');
-const success = document.querySelector('.js-success');
+var modalTriggers = document.querySelectorAll('.js-modalOpen');
+var bodyBlackout = document.querySelector('.js-modalBlackout');
+var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
+var success = document.querySelector('.js-success');
 
-const clearFormErrors = () => {
-  const errorMessages = Array.prototype.slice.call(
+var clearFormErrors = function () {
+  var errorMessages = Array.prototype.slice.call(
     document.querySelectorAll('.form-input__error'));
 
-  errorMessages.forEach((errorMessage) => {
+  errorMessages.forEach( function (errorMessage) {
     errorMessage.parentNode.removeChild(errorMessage);
   });
 };
 
-const closeModal = (popup) => {
+var closeModal = function (popup) {
   popup.classList.remove('is--visible');
   bodyBlackout.classList.remove('is-blacked-out');
   success.classList.remove('modal__success--show');
@@ -147,23 +147,23 @@ const closeModal = (popup) => {
   clearFormErrors()
 }
 
-modalTriggers.forEach(trigger => {
-  trigger.addEventListener('click', (evt) => {
-    const popupTrigger = trigger.dataset.popupTrigger;
-    const popupModal = document.querySelector(`[data-popup-modal="${popupTrigger}"]`);
+modalTriggers.forEach(function (trigger) {
+  trigger.addEventListener('click', function (evt) {
+    var popupTrigger = trigger.dataset.popupTrigger;
+    var popupModal = document.querySelector('[data-popup-modal="${popupTrigger}"]');
 
     evt.preventDefault();
     popupModal.classList.add('is--visible');
     bodyBlackout.classList.add('is-blacked-out');
 
-    bodyBlackout.addEventListener('click', () => {
+    bodyBlackout.addEventListener('click', function () {
       closeModal(popupModal);
     });
 
-    modalCloseBtn.addEventListener('click', () => {
+    modalCloseBtn.addEventListener('click', function () {
       closeModal(popupModal);
     });
-    window.addEventListener('keydown', (evt) => {
+    window.addEventListener('keydown', function (evt) {
       if (evt.keyCode === 27) {
         if (popupModal.classList.contains('is--visible')) {
           evt.preventDefault();
