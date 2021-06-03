@@ -35,7 +35,7 @@
         <use xlink:href="#phone-icon"></use>
       </svg>
       +7 (495) 000 52 52</a>
-    <button class="button" aria-label="Заказать звонок">Заказать звонок</button>
+    <button class="button js-modalOpen" data-popup-trigger="modal" aria-label="Заказать звонок">Заказать звонок</button>
   </nav>
 </header>
 
@@ -208,7 +208,16 @@
   </section>
 
   <section class="feedback" id="feedback">
-    <form class="form js-form" action="https://echo.htmlacademy.ru" method="get">
+    <picture>
+      <!-- 1х: 511px; 2x: 1022px -->
+      <source type="image/webp" media="(min-width: 1024px)" srcset="./img/airplane-desktop@1x.webp 1x, ./img/airplane-desktop@2x.webp 2x">
+      <!-- 1х: 511px; 2x: 1022px -->
+      <source media="(min-width: 1024px)" srcset="./img/airplane-desktop@1x.png 1x, ./img/airplane-desktop@2x.png 2x">
+      <!-- 1х: 511px; 2x: 1022px -->
+      <img src="img/airplane-desktop@1x.png" srcset="./img/airplane-desktop@2x.png 2x" width="511"
+           height="288" alt="Самолёт">
+    </picture>
+    <form class="form js-form" name="feedbackForm" id="feedbackForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
       <div class="form-input">
@@ -218,17 +227,19 @@
       </div>
       <div class="form-input">
         <label for="tel"></label>
-        <input class="js-validateTel" id="tel" name="tel" type="text" pattern="\d*" maxlength="11"
-               placeholder="Tелефона" aria-label="Поле для ввода телефона" required/>
+        <input class="js-validateTel" id="tel" name="tel" type="text" maxlength="17"
+               placeholder="Телефон" aria-label="Поле для ввода телефона" required/>
       </div>
       <div class="form-textarea">
-        <textarea cols="50" rows="5"
+        <textarea class="js-comment" cols="50" rows="5"
+                  name="comment"
+                  form="feedbackForm"
                   placeholder="Ваш вопрос"
                   aria-label="Поле для ввода вашего вопроса"></textarea>
       </div>
       <button class="button js-sendForm" type="submit">Задать вопрос</button>
       <div class="form-checkbox">
-        <input type="checkbox" name="accord" id="accord">
+        <input class="js-accord" type="checkbox" name="accord" id="accord" checked>
         <label for="accord">Я согласен на обработку персональных данных</label>
       </div>
     </form>
@@ -268,7 +279,7 @@
     </div>
 
     <div class="footer-nav__item footer-nav__item--sections">
-      <h3>Разделы сайта</h3>
+      <h3 class="active">Разделы сайта</h3>
       <div class="footer-nav__menu">
         <a href="#" aria-label="О компании">О компании</a>
         <a href="#" aria-label="Продукты">Продукты</a>
@@ -302,18 +313,39 @@
 
 </footer>
 
-<div class="modal js-modal" data-popup-modal="order">
+<div class="modal js-modal" data-popup-modal="modal">
   <div class="modal__inner">
     <button class="modal__button-close js-modalCloseBtn">
       <svg class="modal__button-icon" width="24" height="24">
         <use xlink:href="#close-icon"></use>
       </svg>
     </button>
-    <div class="form js-form">
-
-      <h3>Форма записи</h3>
-
-    </div>
+    <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
+      <h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <div class="form-input">
+        <label for="name-modal"></label>
+        <input class="js-validateName" type="text" pattern="\D*" maxlength="50" id="name-modal" name="name"
+               placeholder="Имя" aria-label="Поле для ввода имени" required/>
+      </div>
+      <div class="form-input">
+        <label for="tel-modal"></label>
+        <input class="js-validateTel" id="tel-modal" name="tel" type="text" pattern="\d*" maxlength="17"
+               placeholder="Tелефона" aria-label="Поле для ввода телефона" required/>
+      </div>
+      <div class="form-textarea">
+        <textarea class="js-comment" cols="50" rows="5"
+                  name="comment-modal"
+                  form="modalForm"
+                  placeholder="Ваш вопрос"
+                  aria-label="Поле для ввода вашего вопроса"></textarea>
+      </div>
+      <button class="button js-sendForm" type="submit">Задать вопрос</button>
+      <div class="form-checkbox">
+        <input class="js-accord" type="checkbox" name="accord-modal" id="accord-modal" checked>
+        <label for="accord-modal">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
     <div class="modal__success js-success">
       <h2>Контакты успешно отправлены, мы скоро свяжемся с вами</h2>
     </div>
@@ -413,6 +445,6 @@
 
 </svg>
 
-<!--<script src="./js/accordion.js"></script>-->
+<script src="./js/main.js"></script>
 </body>
 </html>

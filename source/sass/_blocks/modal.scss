@@ -2,5 +2,64 @@
 @import "../mixins/media.scss";
 
 .modal {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &.is--visible {
+    $modalVisible: & !global;
+    z-index: 100;
+  }
+}
+
+.modal__inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 728px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: opacity 100ms linear;
+
+
+  #{$modalVisible} & {
+    opacity: 1;
+  }
+}
+
+.modal__blackout {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 50ms linear;
+
+  &.is-blacked-out {
+    opacity: 1;
+  }
+}
+
+.modal__success {
   display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ccc;
+
+  &--show {
+    display: block;
+  }
 }

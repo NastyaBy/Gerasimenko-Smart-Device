@@ -2,6 +2,9 @@
 @import "../mixins/media";
 
 .form {
+  display: flex;
+  flex-direction: column;
+
   h2 {
     font-family: $accent-font;
     font-style: normal;
@@ -21,6 +24,7 @@
   }
 
   p {
+    margin-bottom: 50px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -32,5 +36,9 @@
     border-color: $basic-white;
     max-width: 280px;
     width: 100%;
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }
