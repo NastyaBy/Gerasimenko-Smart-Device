@@ -18,14 +18,17 @@
 .modal__inner {
   position: relative;
   margin: 0 auto;
-  padding: 0;
-  width: 728px;
+  padding: 35px 40px;
+  width: 410px;
   z-index: 2;
   display: flex;
   flex-direction: row;
-  transform: translateY(50%);
+  justify-content: center;
+  transform: translateY(120px);
   opacity: 0;
   transition: opacity 100ms linear;
+  color: $basic-white;
+  background: $accent-color;
 
 
   #{$modalVisible} & {
@@ -49,17 +52,17 @@
   }
 }
 
-.modal__success {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: $accent-color;
 
-  &--show {
-    display: block;
-  }
+.modal__button-close {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  outline: 0;
+  color: $basic-white;
 }

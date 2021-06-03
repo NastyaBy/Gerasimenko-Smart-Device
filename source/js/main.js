@@ -24,47 +24,42 @@ accordionHeading.forEach(function (item) {
 
 // маски валидации input
 // валидации телефона
-window.addEventListener('DOMContentLoaded', function () {
-  function setCursorPosition(pos, elem) {
-    elem.focus();
-    if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
-    else if (elem.createTextRange) {
-      var range = elem.createTextRange();
-      range.collapse(true);
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
+function setCursorPosition(pos, e) {
+  e.focus();
+  if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+  else if (e.createTextRange) {
+    var range = e.createTextRange();
+    range.collapse(true);
+    range.moveEnd("character", pos);
+    range.moveStart("character", pos);
+    range.select()
+  }
+}
+
+function mask(e) {
+  //console.log('mask',e);
+  var matrix = '+7 (___) ___-__-__',// .defaultValue
+    i = 0,
+    def = matrix.replace(/\D/g, ""),
+    val = this.value.replace(/\D/g, "");
+  def.length >= val.length && (val = def);
+  matrix = matrix.replace(/[_\d]/g, function(a) {
+    return val.charAt(i++) || "_"
+  });
+  this.value = matrix;
+  i = matrix.lastIndexOf(val.substr(-1));
+  i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+  setCursorPosition(i, this)
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  var inputsTel = document.querySelectorAll(".js-validateTel");
+
+  inputsTel.forEach( function (input) {
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", setCursorPosition(3, input), false);
     }
-  }
-
-  function mask(event) {
-    var matrix = '+7 (___) ___ ____',
-      i = 0,
-      def = matrix.replace(/\D/g, ''),
-      val = this.value.replace(/\D/g, '');
-
-    if (def.length >= val.length) val = def;
-    this.value = matrix.replace(/./g, function(a) {
-      return /[_\d]/.test(a) && i < val.length ?
-        val.charAt(i++) :
-        i >= val.length ? '' : a;
-    });
-
-    if (event.type === 'blur') {
-      if (this.value.length === 2) this.value = '';
-    } else setCursorPosition(this.value.length, this);
-  }
-
-  var inputTels = document.querySelectorAll('.js-validateTel');
-
-  if (inputTels) {
-    inputTels.forEach(function(tel) {
-      tel.addEventListener('input', mask, false);
-      tel.addEventListener('focus', mask, false);
-      tel.addEventListener('blur', mask, false);
-    });
-
-  }
+  )
 });
 
 // валидации имени
@@ -78,7 +73,7 @@ function inputHandlerName(e) {
 var inputNames = document.querySelectorAll('.js-validateName');
 
 if (inputNames) {
-  inputNames.forEach(function(name) {
+  inputNames.forEach(function (name) {
     name.addEventListener('input', inputHandlerName);
   });
 }
@@ -87,26 +82,25 @@ if (inputNames) {
 var forms = document.querySelectorAll('.js-form');
 
 if (forms) {
-  forms.forEach(function(form) {
+  forms.forEach(function (form) {
     var accord = form.querySelector('.js-accord');
     var sendForm = form.querySelector('.js-sendForm');
 
     if (accord) {
-      accord.addEventListener('change', function(e) {
-        sendForm.disabled = !e.target.checked
-      })
+      accord.addEventListener('change', function (e) {
+        sendForm.disabled = !e.target.checked;
+      });
     }
   });
 }
 
 // отправка формы
 var sendForms = document.querySelectorAll('.js-sendForm');
-var comment = document.querySelectorAll('.js-comment');
 
 if (sendForms) {
-  sendForms.forEach(function(form) {
-    form.addEventListener('click', function() {
-
+  sendForms.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var form = button.form
       var inputName = form.querySelector('.js-validateName');
       var inputTel = form.querySelector('.js-validateTel');
       var textareaComment = form.querySelector('.js-comment');
@@ -121,17 +115,15 @@ if (sendForms) {
       localStorage.setItem('order', serialObj);
     });
   });
-};
+}
 
 // открытие модального окна
+const modalTriggers = document.querySelectorAll('.js-modalOpen');
+const bodyBlackout = document.querySelector('.js-modalBlackout');
+const modalCloseBtn = document.querySelector('.js-modalCloseBtn');
 
-var modalTriggers = document.querySelectorAll('.js-modalOpen');
-var bodyBlackout = document.querySelector('.js-modalBlackout');
-var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
-var success = document.querySelector('.js-success');
-
-var clearFormErrors = function () {
-  var errorMessages = Array.prototype.slice.call(
+const clearFormErrors = () => {
+  const errorMessages = Array.prototype.slice.call(
     document.querySelectorAll('.form-input__error'));
 
   errorMessages.forEach( function (errorMessage) {
@@ -139,18 +131,17 @@ var clearFormErrors = function () {
   });
 };
 
-var closeModal = function (popup) {
+const closeModal = function (popup) {
   popup.classList.remove('is--visible');
   bodyBlackout.classList.remove('is-blacked-out');
-  success.classList.remove('modal__success--show');
 
   clearFormErrors()
 }
 
 modalTriggers.forEach(function (trigger) {
   trigger.addEventListener('click', function (evt) {
-    var popupTrigger = trigger.dataset.popupTrigger;
-    var popupModal = document.querySelector('[data-popup-modal="${popupTrigger}"]');
+    const popupTrigger = trigger.dataset.popupTrigger;
+    const popupModal = document.querySelector(`[data-popup-modal="${popupTrigger}"]`);
 
     evt.preventDefault();
     popupModal.classList.add('is--visible');
@@ -170,6 +161,22 @@ modalTriggers.forEach(function (trigger) {
           closeModal(popupModal);
         }
       }
+    });
+  });
+});
+
+// плавное прокручивание якорной ссылки
+var anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var blockID = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
     });
   });
 });

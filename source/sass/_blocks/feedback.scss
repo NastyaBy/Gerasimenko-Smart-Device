@@ -23,11 +23,14 @@
       height: 487px;
       background: url("data:image/svg+xml,%3Csvg width='611' height='487' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.2' d='M605.842 5.584l-274.675 475.75L56.492 5.584h549.35z' stroke='%23fff'/%3E%3Cpath opacity='.2' d='M326.148 203.75L165.5 482 4.852 203.75h321.296z' stroke='%23fff'/%3E%3Ccircle cx='56' cy='5' r='5' fill='%23fff'/%3E%3Ccircle cx='5' cy='204' r='5' fill='%23fff'/%3E%3Ccircle cx='166' cy='482' r='5' fill='%23fff'/%3E%3Ccircle cx='331' cy='481' r='5' fill='%23fff'/%3E%3Ccircle cx='606' cy='5' r='5' fill='%23fff'/%3E%3C/svg%3E") 50% 50% no-repeat;
     }
+
+    @include media-tablet {
+      display: none;
+    }
+
   }
 
-  @include media-tablet {
-    display: none;
-  }
+
 }
 
 .feedback__form {
@@ -35,7 +38,10 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1145px;
   margin: 0 auto;
   padding: 100px 0 121px calc(50%);
+
+  @include media-tablet {
+    padding: 83px 87px;
+  }
 }
