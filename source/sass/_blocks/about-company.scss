@@ -2,15 +2,18 @@
 @import "../mixins/media";
 
 .about-company {
-  max-width: 1147px;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1153px;
+  margin: 0 auto 110px;
   color: $principal-text-color;
-
+  box-sizing: border-box;
 
   &--year {
     position: relative;
-    padding-left: 200px;
+    padding-left: 183px;
+
+    @include media-mobile {
+      padding-left: 0;
+    }
 
     &::before {
       position: absolute;
@@ -18,10 +21,17 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: 220px;
-      height: 317px;
-      margin-left: 71px;
-      background: url("../../img/2005.png") 50% 50% no-repeat ;
+      width: 168px;
+      height: 328px;
+      background: url("../../img/2005@1x.png") 50% 50% no-repeat;
+
+      @include retina-size {
+        background: url("../../img/2005@2x.png") 50% 50% / 220px 317px no-repeat;
+      }
+
+      @include media-mobile {
+        display: none;
+      }
     }
   }
 
@@ -32,20 +42,26 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
+
+    @include media-tablet {
+      font-size: 32px;
+      line-height: 45px;
+    }
   }
 
   p {
-    max-width: 975px;
-    margin-bottom: 22px;
+    margin: 0 0 22px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
   }
+
 }
 
 .about-company__button {
-  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
   color: $accent-color;
   background: $basic-white;
 

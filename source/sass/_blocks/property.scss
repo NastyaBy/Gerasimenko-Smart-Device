@@ -5,8 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  max-width: 1147px;
-  width: 100%;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 112px 0 75px;
 
@@ -31,6 +30,7 @@
   color: $principal-text-color;
   border: 1px solid $property-item-border-color;
   cursor: pointer;
+  background: $basic-white;
 
   @include media-tablet {
     min-height: 187px;

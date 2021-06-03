@@ -1,0 +1,34 @@
+@import "../variables.scss";
+@import "../mixins/media";
+
+.form-input {
+  input {
+    padding: 14px 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    background: $form-input-background-color;
+    color: $basic-white;
+    border: none;
+
+    &::placeholder {
+      color: $basic-white;
+    }
+
+    &:hover {
+      padding: 12px 14px;
+      border: 2px solid $basic-white;
+    }
+
+    &:active {
+      padding: 12px 14px;
+      border: 2px solid $basic-white;
+    }
+
+    &:focus {
+      color: $basic-white;
+      outline: 2px solid;
+    }
+  }
+}

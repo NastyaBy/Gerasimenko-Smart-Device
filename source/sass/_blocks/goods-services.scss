@@ -1,0 +1,106 @@
+@import "../variables.scss";
+@import "../mixins/media";
+
+.goods-services {
+  padding: 87px 25px 128px;
+  color: $basic-white;
+  background: $goods-services-background-color;
+
+  @include media-tablet {
+    padding: 50px 25px 78px;
+  }
+
+  @include media-mobile {
+    padding: 50px 15px 64px;
+  }
+
+  h2 {
+    margin: 0 auto 52px;
+    max-width: 1145px;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+
+    @include media-tablet {
+      margin: 0 0 43px 12px;
+      max-width: 613px;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @include media-mobile {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+}
+
+
+.goods-services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  @include media-tablet {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  @include media-mobile {
+    gap: 30px;
+  }
+}
+
+.goods-services__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  picture {
+    display: block;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  h3 {position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 50px 46px auto;
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 170px;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: normal;
+
+    @include media-tablet {
+      margin: 41px 45px auto;
+    }
+
+    @include media-tablet {
+      margin: 20px 37px auto;
+    }
+  }
+
+  &::before {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 63px;
+    height: 64px;
+    background:  $accent-color url("data:image/svg+xml,%3Csvg width='6' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 8.5l4-4-4-4' stroke='%23fff' stroke-linejoin='round'/%3E%3C/svg%3E") 50% 50% no-repeat;
+  }
+}
