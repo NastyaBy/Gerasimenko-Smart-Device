@@ -2,7 +2,7 @@
 @import "../mixins/media";
 
 .goods-services {
-  padding: 87px 25px 128px;
+  padding: 87px 25px 116px;
   color: $basic-white;
   background: $goods-services-background-color;
 
@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1150px;
+  max-width: 1169px;
   margin: 0 auto;
 
   @include media-tablet {

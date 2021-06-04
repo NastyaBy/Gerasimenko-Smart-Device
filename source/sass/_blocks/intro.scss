@@ -9,7 +9,7 @@
   picture {
     position: absolute;
     top: calc(50% - 180px);
-    left: calc(50% + 90px);
+    left: calc(50% + 86px);
     z-index: 0;
 
     @include media-tablet {
@@ -72,7 +72,7 @@
   max-width: 1465px;
   width: 100%;
   margin: 0 auto;
-  padding: 249px 0 274px;
+  padding: 249px 0 275px;
   color: $basic-white;
 
   @include media-tablet {
@@ -84,8 +84,8 @@
   }
 
   h1 {
-    margin-bottom: 5px;
-    padding-left: 34px;
+    margin: 67px 0 5px;
+    padding-left: 30px;
     font-family: $accent-font;
     font-weight: bold;
     font-size: 80px;
@@ -114,7 +114,7 @@
     position: relative;
     max-width: 620px;
     width: 100%;
-    margin: 22px 0 45px 133px;
+    margin: 22px 0 44px 128px;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -137,7 +137,7 @@
     &::before {
       content: "";
       position: absolute;
-      left: -95px;
+      left: -94px;
       top: 17px;
       width: 66px;
       border-top: 2px solid $basic-white;
@@ -151,8 +151,8 @@
 }
 
 .intro__button {
-  max-width: 408px;
-  margin-left: 132px;
+  max-width: 407px;
+  margin-left: 128px;
 
   &--mobile {
     display: none;
@@ -180,7 +180,7 @@
 .intro__scroll {
   position: absolute;
   bottom: 126px;
-  left: 0;
+  left: -4px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

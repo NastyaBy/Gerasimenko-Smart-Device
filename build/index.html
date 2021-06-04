@@ -198,12 +198,12 @@
         </div>
       </div>
       <div class="form-textarea">
-        <textarea class="js-comment" cols="50" rows="5" name="comment" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
+        <textarea class="js-comment" cols="50" rows="6" name="comment" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
       </div>
       <div class="form__row">
-        <button class="button js-sendForm" type="submit" disabled="">Задать вопрос</button>
+        <button class="button js-sendForm" type="submit">Задать вопрос</button>
         <div class="form-checkbox">
-          <input class="js-accord form-checkbox__control" type="checkbox" name="accord" id="accord">
+          <input class="form-checkbox__control" type="checkbox" name="accord" id="accord" required="">
           <label class="form-checkbox__text" for="accord">Я согласен на обработку персональных данных</label>
         </div>
       </div>
@@ -290,18 +290,18 @@
       <p>Мы проконсультируем Вас бесплатно</p>
         <div class="form-input">
           <label for="name-modal"></label>
-          <input class="js-validateName" type="text" pattern="\D*" maxlength="50" id="name-modal" name="name-modal" placeholder="Имя" aria-label="Поле для ввода имени" required="">
+          <input class="js-validateName" type="text" pattern="\D*" maxlength="50" id="name-modal" name="name" placeholder="Имя" aria-label="Поле для ввода имени" required="">
         </div>
         <div class="form-input">
           <label for="tel-modal"></label>
-          <input class="js-validateTel" id="tel-modal" name="tel-modal" type="tel" pattern="^\+7(\s+)?\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" maxlength="50" placeholder="Телефон" aria-label="Поле для ввода телефона" required="">
+          <input class="js-validateTel" id="tel-modal" name="modal" type="tel" pattern="^\+7(\s+)?\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" maxlength="50" placeholder="Телефон" aria-label="Поле для ввода телефона" required="">
         </div>
       <div class="form-textarea">
-        <textarea class="js-comment" cols="40" rows="5" name="comment-modal" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
+        <textarea class="js-comment" cols="40" rows="6" name="comment" form="modalForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
       </div>
-        <button class="button js-sendForm" type="submit" disabled="">Задать вопрос</button>
+        <button class="button js-sendForm" type="submit">Задать вопрос</button>
         <div class="form-checkbox">
-          <input class="js-accord form-checkbox__control" type="checkbox" name="accord-modal" id="accord-modal">
+          <input class="form-checkbox__control" type="checkbox" name="accord" id="accord-modal" required="">
           <label class="form-checkbox__text" for="accord-modal">Я согласен на обработку персональных данных</label>
       </div>
     </form>

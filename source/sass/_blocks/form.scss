@@ -6,6 +6,7 @@
   flex-direction: column;
 
   h2 {
+    margin-bottom: 10px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: normal;
@@ -24,7 +25,7 @@
   }
 
   p {
-    margin-bottom: 50px;
+    margin: 0 0 40px 4px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -47,6 +48,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+
+  @include media-mobile {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
 }
-
-

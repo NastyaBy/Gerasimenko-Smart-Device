@@ -2,17 +2,16 @@
 @import "../mixins/media";
 
 .form-input {
-  
   input {
-    margin-bottom: 40px;
     padding: 14px 16px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 22px;
     background: $form-input-background-color;
     color: $basic-white;
     border: none;
+    width: 100%;
+    box-sizing: border-box;
 
     &::placeholder {
       color: $basic-white;
