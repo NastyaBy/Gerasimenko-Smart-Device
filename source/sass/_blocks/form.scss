@@ -25,7 +25,7 @@
   }
 
   p {
-    margin: 0 0 40px 4px;
+    margin: 0 0 52px 4px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -33,13 +33,31 @@
   }
 
   button {
-    border-color: $basic-white;
     max-width: 280px;
     width: 100%;
+    font-size: 14px;
+    padding: 12px 0;
+    border-color: $basic-white;
 
     &:disabled {
       opacity: 0.5;
       pointer-events: none;
+    }
+  }
+
+  &--modal {
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+
+    p {
+      margin: 0 0 33px 0;
+    }
+
+    button {
+      max-width: 403px;
+      margin-bottom: 35px;
     }
   }
 }
@@ -48,6 +66,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  margin-bottom: 40px;
 
   @include media-mobile {
     grid-template-columns: 1fr;

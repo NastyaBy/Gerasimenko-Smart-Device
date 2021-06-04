@@ -11,6 +11,20 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+
+  &--feedback {
+    margin: 0 0 0 10px;
+  }
+
+  &--modal {
+    margin: 0 0 20px 0;
+
+    label {
+      &::before {
+        margin-right: 28px;
+      }
+    }
+  }
 }
 
 .form-checkbox__control {

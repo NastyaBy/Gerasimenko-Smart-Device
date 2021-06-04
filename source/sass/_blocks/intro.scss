@@ -9,7 +9,7 @@
   picture {
     position: absolute;
     top: calc(50% - 180px);
-    left: calc(50% + 86px);
+    left: calc(50% + 78px);
     z-index: 0;
 
     @include media-tablet {
@@ -69,8 +69,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1465px;
-  width: 100%;
+  max-width: 1480px;
   margin: 0 auto;
   padding: 249px 0 275px;
   color: $basic-white;

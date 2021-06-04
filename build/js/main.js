@@ -117,7 +117,7 @@ var closeModal = function (popup) {
 modalTriggers.forEach(function (trigger) {
   trigger.addEventListener('click', function (evt) {
     var popupTrigger = trigger.dataset.popupTrigger;
-    var popupModal = document.querySelector('[data-popup-modal='+ popupTrigger + ']');
+    var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
 
     evt.preventDefault();
     popupModal.classList.add('is--visible');

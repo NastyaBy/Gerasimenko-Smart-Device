@@ -2,14 +2,14 @@
 @import "../mixins/media";
 
 .about-company {
-  max-width: 1153px;
-  margin: 0 auto 115px;
+  max-width: 1165px;
+  margin: 0 auto 110px;
   color: $principal-text-color;
   box-sizing: border-box;
 
   &--year {
     position: relative;
-    padding-left: 183px;
+    padding-left: 180px;
 
     @include media-mobile {
       padding-left: 0;
@@ -21,7 +21,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: 168px;
+      width: 156px;
       height: 328px;
       background: url("../../img/2005@1x.png") 50% 50% no-repeat;
 
@@ -61,7 +61,11 @@
 .about-company__button {
   display: inline-block;
   vertical-align: top;
+  min-width: 178px;
+  margin: 15px 0 0;
+  padding: 12px;
   color: $accent-color;
+  font-size: 14px;
   background: $basic-white;
 
   &:hover {

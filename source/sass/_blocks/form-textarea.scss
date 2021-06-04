@@ -2,8 +2,10 @@
 @import "../mixins/media";
 
 .form-textarea {
+  margin-bottom: 40px;
+
   textarea {
-    margin-bottom: 33px;
+    min-height: 154px;
     padding: 14px 16px;
     width: 100%;
     font-style: normal;
@@ -31,6 +33,14 @@
     &:focus {
       color: $basic-white;
       outline: 2px solid;
+    }
+  }
+
+  &--modal {
+    margin-bottom: 23px;
+
+    textarea {
+      min-height: 105px;
     }
   }
 }
