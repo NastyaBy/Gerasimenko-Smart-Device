@@ -11,7 +11,7 @@
   @include media-tablet {
     width: unset;
     grid-template-columns: 1fr 1fr;
-    margin: 0 24px;
+    margin: 20px 24px 0;
     column-gap: 30px;
   }
 

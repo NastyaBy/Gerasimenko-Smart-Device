@@ -14,8 +14,7 @@
   picture {
     position: absolute;
     top: 160px;
-    right: 50%;
-    margin-right: 100px;
+    right: 1050px;
     z-index: 0;
 
     @include media-tablet {
@@ -36,7 +35,7 @@
 
 
   @include media-tablet {
-    padding: 83px 87px;
+    padding: 79px 87px 66px 92px;
   }
 
   @include media-mobile {

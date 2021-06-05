@@ -16,6 +16,10 @@
     border: none;
     box-sizing: border-box;
 
+    @include media-tablet {
+      min-height: 160px;
+    }
+
     &::placeholder {
       color: $basic-white;
     }

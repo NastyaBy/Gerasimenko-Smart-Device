@@ -7,7 +7,7 @@
   background: $goods-services-background-color;
 
   @include media-tablet {
-    padding: 50px 25px 78px;
+    padding: 50px 25px 77px;
   }
 
   @include media-mobile {
@@ -24,7 +24,7 @@
     line-height: 51px;
 
     @include media-tablet {
-      margin: 0 0 43px 12px;
+      margin: 0 0 48px 0;
       max-width: 613px;
       font-size: 32px;
       line-height: 45px;
@@ -89,7 +89,7 @@
       margin: 41px 45px auto;
     }
 
-    @include media-tablet {
+    @include media-mobile{
       margin: 20px 37px auto;
     }
   }
