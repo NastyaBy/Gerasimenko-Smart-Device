@@ -21,6 +21,7 @@
     }
 
     @include media-mobile {
+      margin: 0 0 13px;
       font-size: 28px;
       line-height: 39px;
     }
@@ -36,6 +37,10 @@
     @include media-tablet {
       margin-bottom: 54px;
     }
+
+    @include media-mobile {
+      margin: 0 0 26px;
+    }
   }
 
   button {
@@ -44,6 +49,10 @@
     font-size: 14px;
     padding: 12px 0;
     border-color: $basic-white;
+
+    @include media-mobile {
+      max-width: 290px;
+    }
 
     &:disabled {
       opacity: 0.5;
@@ -79,6 +88,8 @@
   }
   @include media-mobile {
     grid-template-columns: 1fr;
+    gap: 33px;
     margin-bottom: 30px;
+
   }
 }

@@ -11,6 +11,12 @@
     margin: 0 25px 83px;
   }
 
+
+  @include media-mobile {
+    margin: 0 17px 65px 15px;
+  }
+
+
   &--year {
     position: relative;
     padding-left: 180px;
@@ -47,9 +53,6 @@
         }
       }
 
-
-
-
       @include media-mobile {
         display: none;
       }
@@ -65,9 +68,15 @@
     line-height: 51px;
 
     @include media-tablet {
-      margin-bottom: 25px;
+      margin: 25px 0 22px;
       font-size: 32px;
       line-height: 45px;
+    }
+
+    @include media-mobile {
+      margin-top: 12px;
+      font-size: 28px;
+      line-height: 39px;
     }
   }
 
@@ -77,11 +86,19 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+
+
+    @include media-mobile {
+      margin: 0 0 40px;
+      -webkit-line-clamp: 8;
+    }
   }
+
+
 }
 
 .about-company__button {
@@ -96,6 +113,10 @@
 
   @include media-tablet {
     margin-top: 18px;
+  }
+
+  @include media-mobile {
+    margin-top: -11px;
   }
 
   &:hover {
