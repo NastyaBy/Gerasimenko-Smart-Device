@@ -11,13 +11,17 @@ var accordionHeading = footer.querySelectorAll('h3');
 
 accordionHeading.forEach(function (item) {
   item.addEventListener('click', function () {
-    accordionHeading.forEach(function (element) {
-      if (element.classList.contains('active')) {
-        element.classList.remove('active');
-      }
-    });
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    } else {
+      accordionHeading.forEach(function (element) {
+        if (element.classList.contains('active')) {
+          element.classList.remove('active');
+        }
+      });
+      item.classList.add('active');
+    }
 
-    item.classList.add('active');
   });
 });
 

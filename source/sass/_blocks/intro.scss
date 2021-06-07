@@ -31,7 +31,7 @@
       }
 
       @include media-mobile {
-        width: 291px;
+        width: 294px;
         height: 220px;
       }
     }
@@ -57,7 +57,7 @@
       @include media-mobile {
         width: 153px;
         height: 368px;
-        margin: -22px 0 0 147px;
+        margin: -22px 0 0 141px;
         background: url("data:image/svg+xml,%3Csvg width='153' height='368' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.2' d='M456.852 5.235L250.129 363.29 43.406 5.235h413.446z' stroke='%23fff'/%3E%3Cpath opacity='.2' d='M246.133 154.531l-120.816 209.26L4.501 154.531h241.632z' stroke='%23fff'/%3E%3Ccircle cx='42.821' cy='4.672' r='3.767' fill='%23fff'/%3E%3Ccircle cx='4.399' cy='154.596' r='3.767' fill='%23fff'/%3E%3Ccircle cx='125.694' cy='364.038' r='3.767' fill='%23fff'/%3E%3C/svg%3E") 50% 50% no-repeat;
       }
     }
