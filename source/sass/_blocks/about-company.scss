@@ -11,11 +11,9 @@
     margin: 0 25px 83px;
   }
 
-
   @include media-mobile {
     margin: 0 17px 65px 15px;
   }
-
 
   &--year {
     position: relative;
@@ -68,37 +66,33 @@
     line-height: 51px;
 
     @include media-tablet {
-      margin: 25px 0 22px;
+      margin: 29px 0 25px;
       font-size: 32px;
       line-height: 45px;
     }
 
     @include media-mobile {
-      margin-top: 12px;
+      margin: 12px 0 22px;
       font-size: 28px;
       line-height: 39px;
     }
   }
 
   p {
+    max-height: 87px;
     margin: 0 0 22px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      overflow: hidden;
+    overflow: hidden;
 
 
     @include media-mobile {
+      max-height: 175px;
       margin: 0 0 40px;
-      -webkit-line-clamp: 8;
     }
   }
-
-
 }
 
 .about-company__button {

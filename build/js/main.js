@@ -1,6 +1,5 @@
 'use strict';
 
-// акардион
 var footer = document.querySelector('.footer-nav');
 var actives = footer.querySelectorAll('.active');
 
@@ -22,8 +21,6 @@ accordionHeading.forEach(function (item) {
   });
 });
 
-// маски валидации input
-// валидации телефона
 function setCursorPosition(pos, e) {
   e.focus();
   if (e.setSelectionRange) {
@@ -65,7 +62,6 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// валидации имени
 function inputHandlerName(e) {
   var el = e.target;
   var pattern = /\d/g;
@@ -81,7 +77,6 @@ if (inputNames) {
   });
 }
 
-// отправка формы
 var sendForms = document.querySelectorAll('.js-sendForm');
 
 if (sendForms) {
@@ -104,7 +99,6 @@ if (sendForms) {
   });
 }
 
-// открытие модального окна
 var modalTriggers = document.querySelectorAll('.js-modalOpen');
 var bodyBlackout = document.querySelector('.js-modalBlackout');
 var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
@@ -141,7 +135,6 @@ modalTriggers.forEach(function (trigger) {
   });
 });
 
-// плавное прокручивание якорной ссылки
 var anchors = document.querySelectorAll('a[href*="#"]');
 
 anchors.forEach(function (anchor) {

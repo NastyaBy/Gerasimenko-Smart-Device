@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Электронные комплектующие - производство и монтаж, поставка комплектующих, блоков и модулей">
   <meta name="keywords" content="Service Device, Печатные платы, OSRAM, CREE, HOLGLITRONIC, REFOND">
+  <meta name="theme-color" content="#00b2ff">
   <title>Service Device</title>
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./fonts/pt-mono-regular.woff2" as="font" type="font/woff2">
   <link rel="preload" href="./fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2">
-  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="layout">
@@ -19,7 +20,7 @@
       <source media="(max-width: 767px)" srcset="./img/logo-header-mobile.svg">
       <source media="(max-width: 1023px)" srcset="./img/logo-header-tablet.svg">
       <source media="(min-width: 1024px)" srcset="./img/logo-header-desktop.svg">
-      <img src="./img/logo-header-desktop.svg" alt="Логотип Service Device">
+      <img src="./img/logo-header-desktop.svg" alt="Логотип Service Device" width="202" height="52">
     </picture>
   </a>
 
@@ -66,20 +67,21 @@
   </section>
 
   <section class="info">
+    <h2 class="visually-hidden">Информации</h2>
     <section class="property" id="property">
       <div class="property__item">
         <svg width="29" height="35">
           <use xlink:href="#timeline-icon"></use>
         </svg>
         <h2>Оперативные сроки</h2>
-        <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+        <p>Усовершенствованная логистическая система позволяет нам просчитывать&nbsp;<br class="br-tablet">стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
       </div>
       <div class="property__item">
         <svg width="35" height="35">
           <use xlink:href="#major-suppliers-icon"></use>
         </svg>
         <h2>Крупные поставщики</h2>
-        <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+        <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM,&nbsp;CREE,&nbsp;<br class="br-tablet">HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
       </div>
       <div class="property__item">
         <svg width="36" height="35">
@@ -92,8 +94,8 @@
         <svg width="35" height="35">
           <use xlink:href="#personalization-value-icon"></use>
         </svg>
-        <h2>Персонализация стоимости</h2>
-        <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+        <h2>Персонализация&nbsp;стоимости</h2>
+        <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить&nbsp;ту цену, которая Вас устраивает.</p>
       </div>
     </section>
 
@@ -104,14 +106,14 @@
       <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
         платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
         (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-      <a class="button about-company__button" aria-label="Узнать поподробней о компании">Подробнее</a>
+      <a class="button about-company__button" href="#" aria-label="Узнать поподробней о компании">Подробнее</a>
     </section>
   </section>
 
   <section class="goods-services">
     <h2>Service Device предлагает следующие товары и услуги</h2>
     <div class="goods-services__list">
-      <a class="goods-services__item">
+      <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/production-boards-mobile@1x.webp 1x, ./img/production-boards-mobile@2x.webp 2x">
@@ -130,7 +132,7 @@
         </picture>
         <h3>Производство печатных плат</h3>
       </a>
-      <a class="goods-services__item">
+      <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/installation-of-circuit-boards-mobile@1x.webp 1x, ./img/installation-of-circuit-boards-mobile@2x.webp 2x">
@@ -149,7 +151,7 @@
         </picture>
         <h3>Монтаж печатных плат</h3>
       </a>
-      <a class="goods-services__item">
+      <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/lighting-components-mobile@1x.webp 1x, ./img/lighting-components-mobile@2x.webp 2x">
@@ -197,7 +199,7 @@
         <textarea class="js-comment" cols="50" name="comment" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
       </div>
       <div class="form__row">
-        <button class="button js-sendForm" type="submit">Задать вопрос</button>
+        <button class="button js-sendForm" type="submit" aria-label="Задать вопрос">Задать вопрос</button>
         <div class="form-checkbox form-checkbox--feedback">
           <input class="form-checkbox__control" type="checkbox" name="accord" id="accord" required="">
           <label class="form-checkbox__text" for="accord">Я согласен на обработку персональных данных</label>
@@ -216,7 +218,7 @@
           <source media="(max-width: 767px)" srcset="./img/logo-footer-mobile.svg">
           <source media="(max-width: 1023px)" srcset="./img/logo-footer-tablet.svg">
           <source media="(min-width: 1024px)" srcset="./img/logo-footer-desktop.svg">
-          <img src="./img/logo-footer-desktop.svg" alt="Логотип Service Device">
+          <img src="./img/logo-footer-desktop.svg" alt="Логотип Service Device" width="215" height="52">
         </picture>
       </a>
       <span class="footer-nav__copyright">1999-2018 SD Service Devices</span>
@@ -276,7 +278,7 @@
 
 <div class="modal js-modal" data-popup-modal="modal">
   <div class="modal__inner">
-    <button class="modal__button-close js-modalCloseBtn">
+    <button class="modal__button-close js-modalCloseBtn" aria-label="Закрыть окно заказа обратного звонка">
       <svg class="modal__button-icon" width="17" height="17">
         <use xlink:href="#close-icon"></use>
       </svg>
@@ -295,7 +297,7 @@
       <div class="form-textarea form-textarea--modal">
         <textarea class="js-comment" cols="40" name="comment" form="modalForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
       </div>
-        <button class="button js-sendForm" type="submit">Отправить</button>
+        <button class="button js-sendForm" type="submit" aria-label="Отравить данные для обратного званка">Отправить</button>
         <div class="form-checkbox form-checkbox--modal">
           <input class="form-checkbox__control" type="checkbox" name="accord" id="accord-modal" required="">
           <label class="form-checkbox__text" for="accord-modal">Я согласен на обработку персональных данных</label>

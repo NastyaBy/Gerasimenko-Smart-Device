@@ -17,7 +17,6 @@
       margin: 0 0 17px;
       font-size: 32px;
       line-height: 45px;
-
     }
 
     @include media-mobile {
@@ -86,10 +85,10 @@
   @include media-mobile {
     margin-bottom: 43px;
   }
+
   @include media-mobile {
     grid-template-columns: 1fr;
     gap: 33px;
     margin-bottom: 30px;
-
   }
 }
