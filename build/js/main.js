@@ -40,13 +40,19 @@ function mask(e) {
   var i = 0;
   var def = matrix.replace(/\D/g, '');
   var val = self.value.replace(/\D/g, '');
-  def.length >= val.length && (val = def);
+  if (def.length >= val.length) {
+    val = def;
+  }
   matrix = matrix.replace(/[_\d]/g, function () {
     return val.charAt(i++) || '_';
   });
   self.value = matrix;
   i = matrix.lastIndexOf(val.substr(-1));
-  i < matrix.length && matrix !== self.placeholder ? i++ : i = matrix.indexOf('_');
+  if (i < matrix.length && matrix !== self.placeholder) {
+    i++;
+  } else {
+    i = matrix.indexOf('_');
+  }
   setCursorPosition(i, self);
 }
 
@@ -112,6 +118,12 @@ modalTriggers.forEach(function (trigger) {
   trigger.addEventListener('click', function (evt) {
     var popupTrigger = trigger.dataset.popupTrigger;
     var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
+    var popupFocusInput = trigger.dataset.popupFocusInput;
+    var popupFocus = popupModal.querySelector(popupFocusInput);
+
+    if (popupFocus) {
+      popupFocus.focus();
+    }
 
     evt.preventDefault();
     popupModal.classList.add('is--visible');
