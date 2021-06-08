@@ -3,27 +3,31 @@
 var footer = document.querySelector('.footer-nav');
 var actives = footer.querySelectorAll('.active');
 
-actives.forEach(function (active) {
-  active.classList.remove('active');
-});
+if (actives) {
+  actives.forEach(function (active) {
+    active.classList.remove('active');
+  });
+}
 
 var accordionHeading = footer.querySelectorAll('h3');
 
-accordionHeading.forEach(function (item) {
-  item.addEventListener('click', function () {
-    if (item.classList.contains('active')) {
-      item.classList.remove('active');
-    } else {
-      accordionHeading.forEach(function (element) {
-        if (element.classList.contains('active')) {
-          element.classList.remove('active');
-        }
-      });
-      item.classList.add('active');
-    }
-
+if (accordionHeading) {
+  accordionHeading.forEach(function (item) {
+    item.addEventListener('click', function () {
+      if (item.classList.contains('active')) {
+        item.classList.remove('active');
+      } else {
+        accordionHeading.forEach(function (element) {
+          if (element.classList.contains('active')) {
+            element.classList.remove('active');
+          }
+        });
+        item.classList.add('active');
+      }
+    });
   });
-});
+}
+
 
 function setCursorPosition(pos, e) {
   e.focus();
@@ -117,53 +121,56 @@ var closeModal = function (popup) {
   popup.classList.remove('is--visible');
   bodyBlackout.classList.remove('is-blacked-out');
 };
+if (modalTriggers) {
+  modalTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (evt) {
+      var popupTrigger = trigger.dataset.popupTrigger;
+      var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
+      var popupFocusInput = trigger.dataset.popupFocusInput;
+      var popupFocus = popupModal.querySelector(popupFocusInput);
 
-modalTriggers.forEach(function (trigger) {
-  trigger.addEventListener('click', function (evt) {
-    var popupTrigger = trigger.dataset.popupTrigger;
-    var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
-    var popupFocusInput = trigger.dataset.popupFocusInput;
-    var popupFocus = popupModal.querySelector(popupFocusInput);
-
-    if (popupFocus) {
-      popupFocus.focus();
-    }
-
-    evt.preventDefault();
-    popupModal.classList.add('is--visible');
-    bodyBlackout.classList.add('is-blacked-out');
-
-    bodyBlackout.addEventListener('click', function () {
-      closeModal(popupModal);
-    });
-
-    modalCloseBtn.addEventListener('click', function () {
-      closeModal(popupModal);
-    });
-    window.addEventListener('keydown', function (e) {
-      if (e.keyCode === 27) {
-        if (popupModal.classList.contains('is--visible')) {
-          e.preventDefault();
-          closeModal(popupModal);
-        }
+      if (popupFocus) {
+        popupFocus.focus();
       }
+
+      evt.preventDefault();
+      popupModal.classList.add('is--visible');
+      bodyBlackout.classList.add('is-blacked-out');
+
+      bodyBlackout.addEventListener('click', function () {
+        closeModal(popupModal);
+      });
+
+      modalCloseBtn.addEventListener('click', function () {
+        closeModal(popupModal);
+      });
+      window.addEventListener('keydown', function (e) {
+        if (e.keyCode === 27) {
+          if (popupModal.classList.contains('is--visible')) {
+            e.preventDefault();
+            closeModal(popupModal);
+          }
+        }
+      });
     });
   });
-});
+}
 
 var anchors = document.querySelectorAll('a[href*="#"]');
 
-anchors.forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+if (anchors) {
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    var blockID = anchor.getAttribute('href').substr(1);
+      var blockID = anchor.getAttribute('href').substr(1);
 
-    if (blockID) {
-      document.getElementById(blockID).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
+      if (blockID) {
+        document.getElementById(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    });
   });
-    }
-  });
-});
+}
