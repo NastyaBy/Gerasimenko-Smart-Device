@@ -35,19 +35,19 @@
       left: 0;
       width: 156px;
       height: 328px;
-      background: url("./img/2005-desktop@1x.png") 50% 50% no-repeat;
+      background: url("../img/2005-desktop@1x.png") 50% 50% no-repeat;
 
       @include retina-size {
-        background: url("./img/2005-desktop@2x.png") 50% 50% / 220px 317px no-repeat;
+        background: url("../img/2005-desktop@2x.png") 50% 50% / 220px 317px no-repeat;
       }
 
       @include media-tablet {
         width: 194px;
         height: 359px;
-        background: url("./img/2005-tablet@1x.png") 50% 50% no-repeat;
+        background: url("../img/2005-tablet@1x.png") 50% 50% no-repeat;
 
         @include retina-size {
-          background: url("./img/2005-tablet@2x.png") 50% 50% / 244px 362px no-repeat;
+          background: url("../img/2005-tablet@2x.png") 50% 50% / 244px 362px no-repeat;
         }
       }
 
