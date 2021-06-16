@@ -280,11 +280,6 @@
 
 <div class="modal js-modal" data-popup-modal="modal">
   <div class="modal__inner">
-    <button class="modal__button-close js-modalCloseBtn" aria-label="Закрыть окно заказа обратного звонка">
-      <svg class="modal__button-icon" width="17" height="17">
-        <use xlink:href="#close-icon"></use>
-      </svg>
-    </button>
     <form class="form form--modal js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -304,6 +299,11 @@
         <label class="form-checkbox__text" for="accord-modal">Я согласен на обработку персональных данных</label>
       </div>
       <button class="button js-sendForm" type="submit" aria-label="Отравить данные для обратного званка">Отправить</button>
+      <button class="modal__button-close js-modalCloseBtn" type="reset" aria-label="Закрыть окно заказа обратного звонка">
+        <svg width="17" height="17">
+          <use xlink:href="#close-icon"></use>
+        </svg>
+      </button>
     </form>
   </div>
   <i class="modal__blackout js-modalBlackout"></i>

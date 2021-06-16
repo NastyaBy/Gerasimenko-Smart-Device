@@ -65,4 +65,12 @@
   cursor: pointer;
   outline: 0;
   color: $basic-white;
+
+  svg {
+    display: block;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px $basic-white;
+  }
 }

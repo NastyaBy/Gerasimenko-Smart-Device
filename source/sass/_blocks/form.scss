@@ -72,7 +72,13 @@
     button {
       max-width: 403px;
       margin-bottom: 35px;
+
+      &[type='reset'] {
+        width: auto;
+        padding: 0;
+      }
     }
+
   }
 }
 

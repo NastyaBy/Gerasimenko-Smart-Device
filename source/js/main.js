@@ -1,15 +1,21 @@
 'use strict';
 
+var layout = document.querySelector('.layout');
+var modalTriggers = document.querySelectorAll('.js-modalOpen');
+var bodyBlackout = document.querySelector('.js-modalBlackout');
+var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
 var footer = document.querySelector('.footer-nav');
+var accordionHeading = footer.querySelectorAll('h3');
 var actives = footer.querySelectorAll('.active');
+var inputNames = document.querySelectorAll('.js-validateName');
+var sendForms = document.querySelectorAll('.js-sendForm');
+var anchors = document.querySelectorAll('a[href*="#"]');
 
 if (actives) {
   actives.forEach(function (active) {
     active.classList.remove('active');
   });
 }
-
-var accordionHeading = footer.querySelectorAll('h3');
 
 if (accordionHeading) {
   accordionHeading.forEach(function (item) {
@@ -27,7 +33,6 @@ if (accordionHeading) {
     });
   });
 }
-
 
 function setCursorPosition(pos, e) {
   e.focus();
@@ -83,15 +88,11 @@ function inputHandlerName(e) {
   el.value = el.value.replace(pattern, '');
 }
 
-var inputNames = document.querySelectorAll('.js-validateName');
-
 if (inputNames) {
   inputNames.forEach(function (name) {
     name.addEventListener('input', inputHandlerName);
   });
 }
-
-var sendForms = document.querySelectorAll('.js-sendForm');
 
 if (sendForms) {
   sendForms.forEach(function (button) {
@@ -112,16 +113,13 @@ if (sendForms) {
     });
   });
 }
-var layout = document.querySelector('.layout');
-var modalTriggers = document.querySelectorAll('.js-modalOpen');
-var bodyBlackout = document.querySelector('.js-modalBlackout');
-var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
 
 var closeModal = function (popup) {
   popup.classList.remove('is--visible');
   bodyBlackout.classList.remove('is-blacked-out');
   layout.classList.remove('layout--no-scroll');
 };
+
 if (modalTriggers) {
   modalTriggers.forEach(function (trigger) {
     trigger.addEventListener('click', function (evt) {
@@ -157,8 +155,6 @@ if (modalTriggers) {
     });
   });
 }
-
-var anchors = document.querySelectorAll('a[href*="#"]');
 
 if (anchors) {
   anchors.forEach(function (anchor) {
