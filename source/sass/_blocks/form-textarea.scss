@@ -12,6 +12,7 @@
     min-height: 154px;
     padding: 14px 16px;
     width: 100%;
+    font-family: $general-font;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -19,7 +20,10 @@
     background: $form-input-background-color;
     color: $basic-white;
     border: none;
+    border-radius: 0;
     box-sizing: border-box;
+    resize: none;
+    appearance: none;
 
     @include media-tablet {
       min-height: 160px;

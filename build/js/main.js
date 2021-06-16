@@ -112,7 +112,7 @@ if (sendForms) {
     });
   });
 }
-
+var layout = document.querySelector('.layout');
 var modalTriggers = document.querySelectorAll('.js-modalOpen');
 var bodyBlackout = document.querySelector('.js-modalBlackout');
 var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
@@ -120,6 +120,7 @@ var modalCloseBtn = document.querySelector('.js-modalCloseBtn');
 var closeModal = function (popup) {
   popup.classList.remove('is--visible');
   bodyBlackout.classList.remove('is-blacked-out');
+  layout.classList.remove('layout--no-scroll');
 };
 if (modalTriggers) {
   modalTriggers.forEach(function (trigger) {
@@ -136,6 +137,7 @@ if (modalTriggers) {
       evt.preventDefault();
       popupModal.classList.add('is--visible');
       bodyBlackout.classList.add('is-blacked-out');
+      layout.classList.add('layout--no-scroll');
 
       bodyBlackout.addEventListener('click', function () {
         closeModal(popupModal);

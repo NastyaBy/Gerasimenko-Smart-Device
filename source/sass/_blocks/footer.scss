@@ -230,9 +230,8 @@
 
 .social {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 27px);
+  grid-template-columns: 27px 27px 27px 27px 27px;
   grid-template-rows: repeat(auto-fill, 27px);
-  grid-auto-flow: column;
   gap: 16px;
 
   @include media-mobile {
