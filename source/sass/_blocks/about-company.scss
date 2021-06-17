@@ -79,7 +79,6 @@
   }
 
   p {
-    max-height: 87px;
     margin: 0 0 22px;
     font-style: normal;
     font-weight: normal;
@@ -87,6 +86,10 @@
     line-height: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include media-tablet {
+      max-height: 87px;
+    }
 
     @include media-mobile {
       max-height: 175px;
