@@ -244,6 +244,11 @@
   grid-template-rows: repeat(auto-fill, 27px);
   gap: 16px;
 
+
+  @include media-tablet {
+    grid-template-columns: 27px 27px 27px;
+  }
+
   @include media-mobile {
     margin-top: 4px;
   }

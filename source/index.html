@@ -131,7 +131,7 @@
       <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
-          <source type="image/webp" media="(max-width: 767px)"
+          <source type="image/webp" media="(max-width: 362px)"
                   srcset="./img/production-boards-mobile@1x.webp 1x, ./img/production-boards-mobile@2x.webp 2x">
           <!-- 1х: 715px; 2x: 1430px -->
           <source type="image/webp" media="(max-width: 1023px)"
@@ -156,7 +156,7 @@
       <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
-          <source type="image/webp" media="(max-width: 767px)"
+          <source type="image/webp" media="(max-width: 362px)"
                   srcset="./img/installation-of-circuit-boards-mobile@1x.webp 1x, ./img/installation-of-circuit-boards-mobile@2x.webp 2x">
           <!-- 1х: 720px; 2x: 1440px -->
           <source type="image/webp" media="(max-width: 1023px)"
@@ -181,7 +181,7 @@
       <a class="goods-services__item" href="#">
         <picture>
           <!-- 1х: 290px; 2x: 580px -->
-          <source type="image/webp" media="(max-width: 767px)"
+          <source type="image/webp" media="(max-width: 362px)"
                   srcset="./img/lighting-components-mobile@1x.webp 1x, ./img/lighting-components-mobile@2x.webp 2x">
           <!-- 1х: 720px; 2x: 1440px -->
           <source type="image/webp" media="(max-width: 1023px)"
@@ -207,39 +207,41 @@
   </section>
 
   <section class="feedback" id="feedback">
-    <picture>
-      <!-- 1х: 511px; 2x: 1022px -->
-      <source type="image/webp" media="(min-width: 1024px)"
-              srcset="./img/airplane-desktop@1x.webp 1x, ./img/airplane-desktop@2x.webp 2x">
-      <!-- 1х: 511px; 2x: 1022px -->
-      <source media="(min-width: 1024px)" srcset="./img/airplane-desktop@1x.png 1x, ./img/airplane-desktop@2x.png 2x">
-      <!-- 1х: 511px; 2x: 1022px -->
-      <img src="img/airplane-desktop@1x.png" srcset="./img/airplane-desktop@2x.png 2x" width="511" height="288" alt="Самолёт">
-    </picture>
-    <form class="form feedback__form js-form" name="feedbackForm" id="feedbackForm" action="https://echo.htmlacademy.ru" method="get">
-      <h2>Остались вопросы? Задайте их нам!</h2>
-      <p>Мы проконсультируем Вас бесплатно</p>
-      <div class="form__row">
-        <div class="form-input">
-          <label class="visually-hidden" for="name">Введите имя</label>
-          <input class="js-validateName" type="text" pattern="\D*" maxlength="50" id="name" name="name" placeholder="Имя" aria-label="Поле для ввода имени" required/>
+    <div class="feedback__inner">
+      <picture>
+        <!-- 1х: 511px; 2x: 1022px -->
+        <source type="image/webp" media="(min-width: 1024px)"
+                srcset="./img/airplane-desktop@1x.webp 1x, ./img/airplane-desktop@2x.webp 2x">
+        <!-- 1х: 511px; 2x: 1022px -->
+        <source media="(min-width: 1024px)" srcset="./img/airplane-desktop@1x.png 1x, ./img/airplane-desktop@2x.png 2x">
+        <!-- 1х: 511px; 2x: 1022px -->
+        <img src="img/airplane-desktop@1x.png" srcset="./img/airplane-desktop@2x.png 2x" width="511" height="288" alt="Самолёт">
+      </picture>
+      <form class="form feedback__form js-form" name="feedbackForm" id="feedbackForm" action="https://echo.htmlacademy.ru" method="get">
+        <h2>Остались вопросы? Задайте их нам!</h2>
+        <p>Мы проконсультируем Вас бесплатно</p>
+        <div class="form__row">
+          <div class="form-input">
+            <label class="visually-hidden" for="name">Введите имя</label>
+            <input class="js-validateName" type="text" pattern="\D*" maxlength="50" id="name" name="name" placeholder="Имя" aria-label="Поле для ввода имени" required/>
+          </div>
+          <div class="form-input">
+            <label class="visually-hidden" for="tel">Введите телефон</label>
+            <input class="js-validateTel" id="tel" name="tel" type="tel" pattern="^\+7(\s+)?\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" maxlength="50" placeholder="Телефон" aria-label="Поле для ввода телефона" required/>
+          </div>
         </div>
-        <div class="form-input">
-          <label class="visually-hidden" for="tel">Введите телефон</label>
-          <input class="js-validateTel" id="tel" name="tel" type="tel" pattern="^\+7(\s+)?\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" maxlength="50" placeholder="Телефон" aria-label="Поле для ввода телефона" required/>
+        <div class="form-textarea">
+          <textarea class="js-comment" cols="50" name="comment" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
         </div>
-      </div>
-      <div class="form-textarea">
-        <textarea class="js-comment" cols="50" name="comment" form="feedbackForm" placeholder="Ваш вопрос" aria-label="Поле для ввода вашего вопроса"></textarea>
-      </div>
-      <div class="form__row">
-        <div class="form-checkbox form-checkbox--feedback">
-          <input class="form-checkbox__control" type="checkbox" name="accord" id="accord" required>
-          <label class="form-checkbox__text" for="accord">Я согласен на обработку персональных данных</label>
+        <div class="form__row">
+          <div class="form-checkbox form-checkbox--feedback">
+            <input class="form-checkbox__control" type="checkbox" name="accord" id="accord" required>
+            <label class="form-checkbox__text" for="accord">Я согласен на обработку персональных данных</label>
+          </div>
+          <button class="button js-sendForm" type="submit" aria-label="Задать вопрос">Задать вопрос</button>
         </div>
-        <button class="button js-sendForm" type="submit" aria-label="Задать вопрос">Задать вопрос</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </section>
 
 </main>

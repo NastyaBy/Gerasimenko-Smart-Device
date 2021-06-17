@@ -70,6 +70,14 @@
       display: block;
       height: auto;
       width: 100%;
+
+      @include media-tablet {
+        min-height: 258px;
+      }
+
+      @include media-mobile {
+        height: auto;
+      }
     }
   }
 

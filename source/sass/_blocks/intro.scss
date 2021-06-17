@@ -15,11 +15,11 @@
     @include media-tablet {
       right: 0;
       left: auto;
-      top: 152px;
+      top: 114px;
     }
 
     @include media-mobile {
-      top: 146px;
+      top: 92px;
     }
 
     img {
@@ -75,11 +75,11 @@
   color: $basic-white;
 
   @include media-tablet {
-    padding: 159px 0 163px;
+    padding: 121px 0 163px;
   }
 
   @include media-mobile {
-    padding: 307px 4px 70px;
+    padding: 252px 4px 70px;
   }
 
   h1 {

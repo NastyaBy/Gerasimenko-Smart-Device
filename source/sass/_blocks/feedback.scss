@@ -10,28 +10,13 @@
   @include media-tablet {
     background: $accent-color;
   }
-
-  picture {
-    position: absolute;
-    top: 160px;
-    right: 1050px;
-    z-index: 0;
-
-    @include media-tablet {
-      display: none;
-    }
-  }
 }
 
-.feedback__form {
-  position: relative;
-  z-index: 1;
+.feedback__inner {
+  max-width: 1195px;
   display: flex;
-  flex-direction: column;
-  max-width: 1346px;
   margin: 0 auto;
-  padding: 60px 87px 70px calc(50% - 263px);
-  box-sizing: border-box;
+  padding: 60px 114px 70px 90px;
 
 
   @include media-tablet {
@@ -40,5 +25,35 @@
 
   @include media-mobile {
     padding: 30px 15px 10px;
+  }
+
+  picture {
+    position: relative;
+    flex-grow: 1;
+    margin-top: 100px;
+    margin-right: 114px;
+
+    @include media-tablet {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.feedback__form {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  box-sizing: border-box;
+
+  @include media-tablet {
+    width: 100%;
   }
 }
