@@ -45,9 +45,8 @@
 .header__nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 20px;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   @include media-tablet {
@@ -98,28 +97,29 @@
       }
     }
   }
+}
 
-  button {
-    min-width: 180px;
-    padding: 12px;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    background: none;
-    border: 1px solid $basic-white;
+.header__call-button {
+  min-width: 180px;
+  margin-right: 20px;
+  padding: 12px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  background: none;
+  border: 1px solid $basic-white;
 
-    &:hover {
-      color: $accent-color;
-    }
+  &:hover {
+    color: $accent-color;
+  }
 
-    &:focus {
-      outline: 2px solid;
-      opacity: 1;
-      color: $accent-color;
-      border-radius: 5px;
-    }
+  &:focus {
+    outline: 2px solid;
+    opacity: 1;
+    color: $accent-color;
+    border-radius: 5px;
+  }
 
-    @include media-tablet {
-      display: none;
-    }
+  @include media-tablet {
+    display: none;
   }
 }
